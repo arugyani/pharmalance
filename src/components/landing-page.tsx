@@ -13,43 +13,53 @@ import {
   MapPin,
 } from "lucide-react";
 import Link from "next/link";
+import { NavMobile } from "./nav-mobile";
+
+export const routes = [
+  {
+    title: "Services",
+    path: "#services",
+  },
+  {
+    title: "Fellowship",
+    path: "#fellowship",
+  },
+  {
+    title: "Contact",
+    path: "#contact",
+  },
+  {
+    title: "Newsletter",
+    path: "#newsletter",
+  },
+];
 
 export function LandingPageComponent() {
   return (
-    <div className="flex flex-col min-h-screen bg-green-50">
-      <header className="px-4 lg:px-6 h-16 flex items-center bg-white shadow-sm">
-        <Link className="flex items-center justify-center" href="#">
-          <Microscope className="h-8 w-8 text-green-600" />
-          <span className="ml-2 text-2xl font-bold text-green-600">
-            Pharmalance
-          </span>
-        </Link>
-        <nav className="ml-auto flex gap-4 sm:gap-6">
-          <Link
-            className="text-sm font-medium hover:text-green-600"
-            href="#services"
-          >
-            Services
+    <div className="flex flex-col min-h-screen bg-[#f1efff]">
+      <header className="fixed left-0 right-0 md:inline-block">
+        <div className="flex px-4 lg:px-6 h-16 items-center bg-white shadow-sm">
+          <Link className="flex items-center justify-center" href="#">
+            <Microscope className="h-8 w-8 text-[#ab9fff]" />
+            <span className="ml-2 text-2xl font-bold text-[#ab9fff]">
+              Pharmalance
+            </span>
           </Link>
-          <Link
-            className="text-sm font-medium hover:text-green-600"
-            href="#fellowship"
-          >
-            Fellowship
-          </Link>
-          <Link
-            className="text-sm font-medium hover:text-green-600"
-            href="#contact"
-          >
-            Contact
-          </Link>
-          <Link
-            className="text-sm font-medium hover:text-green-600"
-            href="#newsletter"
-          >
-            Newsletter
-          </Link>
-        </nav>
+
+          <nav className="ml-auto hidden md:flex gap-4 sm:gap-6">
+            {routes.map((route, i) => (
+              <Link
+                key={i}
+                href={route.path}
+                className="text-sm font-medium hover:text-[#ab9fff]"
+              >
+                {route.title}
+              </Link>
+            ))}
+          </nav>
+
+          <NavMobile />
+        </div>
       </header>
       <main className="flex-1">
         <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48">
@@ -63,7 +73,7 @@ export function LandingPageComponent() {
                 precision medicine, biomarker development, and innovative drug
                 discovery strategies.
               </p>
-              <Button className="bg-green-600 hover:bg-green-700 text-white rounded-full px-8 py-3 text-lg">
+              <Button className="bg-[#ab9fff] hover:bg-[#8478d3] text-white rounded-full px-8 py-3 text-lg">
                 Get Started
               </Button>
             </div>
@@ -79,7 +89,7 @@ export function LandingPageComponent() {
             </h2>
             <div className="grid gap-8 md:grid-cols-3">
               <div className="flex flex-col items-center space-y-4 text-center">
-                <Pill className="h-12 w-12 text-green-600" />
+                <Pill className="h-12 w-12 text-[#ab9fff]" />
                 <h3 className="text-xl font-bold">
                   Precision Medicine Strategy
                 </h3>
@@ -89,7 +99,7 @@ export function LandingPageComponent() {
                 </p>
               </div>
               <div className="flex flex-col items-center space-y-4 text-center">
-                <Stethoscope className="h-12 w-12 text-green-600" />
+                <Stethoscope className="h-12 w-12 text-[#ab9fff]" />
                 <h3 className="text-xl font-bold">Biomarker Development</h3>
                 <p className="text-gray-600">
                   Identification and validation of biomarkers for drug efficacy
@@ -97,7 +107,7 @@ export function LandingPageComponent() {
                 </p>
               </div>
               <div className="flex flex-col items-center space-y-4 text-center">
-                <TrendingUp className="h-12 w-12 text-green-600" />
+                <TrendingUp className="h-12 w-12 text-[#ab9fff]" />
                 <h3 className="text-xl font-bold">
                   Market Analysis & Strategy
                 </h3>
@@ -111,11 +121,11 @@ export function LandingPageComponent() {
         </section>
         <section
           id="fellowship"
-          className="w-full py-12 md:py-24 lg:py-32 bg-green-100"
+          className="w-full py-12 md:py-24 lg:py-32 bg-[#ab9fff]-100"
         >
           <div className="container mx-auto px-4 md:px-6">
             <div className="flex flex-col items-center space-y-4 text-center">
-              <GraduationCap className="h-12 w-12 text-green-600" />
+              <GraduationCap className="h-12 w-12 text-[#ab9fff]" />
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
                 Undergraduate Fellowship Program
               </h2>
@@ -151,14 +161,14 @@ export function LandingPageComponent() {
         </section>
         <section
           id="contact"
-          className="w-full py-12 md:py-24 lg:py-32 bg-green-600 text-white"
+          className="w-full py-12 md:py-24 lg:py-32 bg-[#ab9fff] text-white"
         >
           <div className="container mx-auto px-4 md:px-6">
             <div className="flex flex-col items-center space-y-4 text-center">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl mb-2">
                 Contact Us
               </h2>
-              <p className="max-w-[600px] text-green-100 md:text-xl">
+              <p className="max-w-[600px] text-[#ab9fff]-100 md:text-xl">
                 Ready to transform your precision medicine research? Get in
                 touch with us today.
               </p>
@@ -177,7 +187,7 @@ export function LandingPageComponent() {
                 </div>
               </div>
               <Button
-                className="bg-white text-green-600 hover:bg-green-100 rounded-full px-8 py-3 text-lg mt-6"
+                className="bg-white text-[#ab9fff] hover:bg-[#bcb2fc] hover:text-white rounded-full px-8 py-3 text-lg mt-6"
                 onClick={() => alert("Coming Soon!")}
               >
                 Schedule a Consultation
@@ -187,7 +197,7 @@ export function LandingPageComponent() {
         </section>
         <section
           id="newsletter"
-          className="w-full py-12 md:py-24 lg:py-32 bg-green-50"
+          className="w-full py-12 md:py-24 lg:py-32 bg-[#ab9fff]-50"
         >
           <div className="container mx-auto px-4 md:px-6">
             <div className="flex flex-col items-center space-y-4 text-center">
@@ -209,7 +219,7 @@ export function LandingPageComponent() {
                     type="email"
                   />
                   <Button
-                    className="bg-green-600 text-white hover:bg-green-700 rounded-full px-6"
+                    className="bg-[#ab9fff] text-white hover:bg-[#9687f9] rounded-full px-6"
                     type="submit"
                   >
                     Subscribe
@@ -226,15 +236,15 @@ export function LandingPageComponent() {
       </main>
       <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t bg-white">
         <p className="text-xs text-gray-500">
-          © 2023 Pharmalance. All rights reserved.
+          © 2024 Pharmalance. All rights reserved.
         </p>
         <nav className="sm:ml-auto flex gap-4 sm:gap-6">
-          <Link className="text-xs hover:underline underline-offset-4" href="#">
+          {/* <Link className="text-xs hover:underline underline-offset-4" href="#">
             Terms of Service
           </Link>
           <Link className="text-xs hover:underline underline-offset-4" href="#">
             Privacy Policy
-          </Link>
+          </Link> */}
         </nav>
       </footer>
     </div>
