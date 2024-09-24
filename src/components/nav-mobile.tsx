@@ -48,6 +48,7 @@ export const NavMobile = () => {
                     <Link
                       key={i}
                       href={path}
+                      onClick={() => setOpen(false)}
                       className="text-md text-white font-bold"
                     >
                       {title}
