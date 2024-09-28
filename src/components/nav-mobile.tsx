@@ -28,32 +28,27 @@ export const NavMobile = () => {
                 const { path, title } = route;
 
                 return (
-                  <motion.li
+                  <Link
                     key={i}
-                    initial={{ scale: 0, opacity: 0 }}
-                    animate={{ scale: 1, opacity: 1 }}
-                    transition={{
-                      type: "spring",
-                      stiffness: 260,
-                      damping: 20,
-                      delay: 0.1 + i / 10,
-                    }}
-                    whileHover={{
-                      background:
-                        "linear-gradient(to bottom left, #9f82ff, #3b24b5)",
-                      transition: { duration: 0.15, ease: "easeIn" },
-                    }}
-                    className="w-full p-[0.5rem] rounded-xl bg-gradient-to-br from-[#ab9fff] to-[#513cd9] flex justify-center items-center"
+                    href={path}
+                    onClick={() => setOpen(false)}
+                    className="text-md text-white font-bold"
                   >
-                    <Link
+                    <motion.li
                       key={i}
-                      href={path}
-                      onClick={() => setOpen(false)}
-                      className="text-md text-white font-bold"
+                      initial={{ scale: 0, opacity: 0 }}
+                      animate={{ scale: 1, opacity: 1 }}
+                      transition={{
+                        type: "spring",
+                        stiffness: 260,
+                        damping: 20,
+                        delay: 0.1 + i / 10,
+                      }}
+                      className="w-full p-[0.75rem] rounded-xl transition-all bg-[#ab9fff] hover:bg-[#998de9] flex justify-center items-center"
                     >
                       {title}
-                    </Link>
-                  </motion.li>
+                    </motion.li>
+                  </Link>
                 );
               })}
             </ul>

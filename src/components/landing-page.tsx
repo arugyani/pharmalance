@@ -40,8 +40,8 @@ export function LandingPageComponent() {
       <header className="fixed left-0 right-0 md:inline-block">
         <div className="flex px-4 lg:px-6 h-16 items-center bg-white shadow-sm">
           <Link className="flex items-center justify-center" href="#">
-            <Microscope className="h-8 w-8 text-[#ab9fff]" />
-            <span className="ml-2 text-2xl font-bold text-[#ab9fff]">
+            <Microscope className="h-8 w-8 text-[#9b91fc]" />
+            <span className="ml-2 text-2xl font-bold text-[#9b91fc]">
               Pharmalance
             </span>
           </Link>
@@ -51,7 +51,7 @@ export function LandingPageComponent() {
               <Link
                 key={i}
                 href={route.path}
-                className="text-sm font-medium hover:text-[#ab9fff]"
+                className="text-sm font-medium hover:text-[#9b91fc]"
               >
                 {route.title}
               </Link>
@@ -62,7 +62,7 @@ export function LandingPageComponent() {
         </div>
       </header>
       <main className="mt-12 md:mt-0 flex-1">
-        <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48">
+        <section className="w-full py-48">
           <div className="container mx-auto px-4 md:px-6">
             <div className="flex flex-col items-center space-y-4 text-center">
               <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
@@ -73,23 +73,20 @@ export function LandingPageComponent() {
                 precision medicine, biomarker development, and innovative drug
                 discovery strategies.
               </p>
-              <Button className="bg-[#ab9fff] hover:bg-[#8478d3] text-white rounded-full px-8 py-3 text-lg">
+              <Button className="bg-[#9b91fc] hover:bg-[#8478d3] text-white rounded-full px-8 py-3 text-lg">
                 Get Started
               </Button>
             </div>
           </div>
         </section>
-        <section
-          id="services"
-          className="w-full py-12 md:py-24 lg:py-32 bg-white"
-        >
+        <section id="services" className="w-full py-48 bg-white">
           <div className="container mx-auto px-4 md:px-6">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-center mb-12">
               Our Services
             </h2>
             <div className="grid gap-8 md:grid-cols-3">
               <div className="flex flex-col items-center space-y-4 text-center">
-                <Pill className="h-12 w-12 text-[#ab9fff]" />
+                <Pill className="h-12 w-12 text-[#9b91fc]" />
                 <h3 className="text-xl font-bold">
                   Precision Medicine Strategy
                 </h3>
@@ -99,7 +96,7 @@ export function LandingPageComponent() {
                 </p>
               </div>
               <div className="flex flex-col items-center space-y-4 text-center">
-                <Stethoscope className="h-12 w-12 text-[#ab9fff]" />
+                <Stethoscope className="h-12 w-12 text-[#9b91fc]" />
                 <h3 className="text-xl font-bold">Biomarker Development</h3>
                 <p className="text-gray-600">
                   Identification and validation of biomarkers for drug efficacy
@@ -107,7 +104,7 @@ export function LandingPageComponent() {
                 </p>
               </div>
               <div className="flex flex-col items-center space-y-4 text-center">
-                <TrendingUp className="h-12 w-12 text-[#ab9fff]" />
+                <TrendingUp className="h-12 w-12 text-[#9b91fc]" />
                 <h3 className="text-xl font-bold">
                   Market Analysis & Strategy
                 </h3>
@@ -119,13 +116,10 @@ export function LandingPageComponent() {
             </div>
           </div>
         </section>
-        <section
-          id="fellowship"
-          className="w-full py-12 md:py-24 lg:py-32 bg-[#ab9fff]-100"
-        >
+        <section id="fellowship" className="w-full py-48 bg-[#9b91fc]-100">
           <div className="container mx-auto px-4 md:px-6">
             <div className="flex flex-col items-center space-y-4 text-center">
-              <GraduationCap className="h-12 w-12 text-[#ab9fff]" />
+              <GraduationCap className="h-12 w-12 text-[#9b91fc]" />
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
                 Undergraduate Fellowship Program
               </h2>
@@ -159,16 +153,13 @@ export function LandingPageComponent() {
             </div>
           </div>
         </section>
-        <section
-          id="contact"
-          className="w-full py-12 md:py-24 lg:py-32 bg-[#ab9fff] text-white"
-        >
+        <section id="contact" className="w-full py-48 bg-[#9b91fc] text-white">
           <div className="container flex justify-center items-center min-h-[300px] mx-auto px-4 md:px-6">
             <div className="flex flex-col items-center space-y-4 text-center">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl mb-2">
                 Contact Us
               </h2>
-              <p className="max-w-[600px] text-[#ab9fff]-100 md:text-xl">
+              <p className="max-w-[600px] text-[#9b91fc]-100 md:text-xl">
                 Ready to transform your precision medicine research? Get in
                 touch with us today.
               </p>
@@ -187,7 +178,7 @@ export function LandingPageComponent() {
                 </div>
               </div>
               <Button
-                className="bg-white text-[#ab9fff] hover:bg-[#bcb2fc] hover:text-white rounded-full px-8 py-3 text-lg mt-6"
+                className="bg-white text-[#9b91fc] hover:bg-[#bcb2fc] hover:text-white rounded-full px-8 py-3 text-lg mt-6"
                 onClick={() => alert("Coming Soon!")}
               >
                 Schedule a Consultation
@@ -195,10 +186,7 @@ export function LandingPageComponent() {
             </div>
           </div>
         </section>
-        <section
-          id="newsletter"
-          className="w-full py-12 md:py-24 lg:py-32 bg-[#ab9fff]-50"
-        >
+        <section id="newsletter" className="w-full py-48 bg-[#9b91fc]-50">
           <div className="container mx-auto px-4 md:px-6">
             <div className="flex flex-col items-center space-y-4 text-center">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
@@ -209,22 +197,19 @@ export function LandingPageComponent() {
                 medicine, biomarker research, and industry insights.
               </p>
               <div className="w-full max-w-sm space-y-2">
-                <form
-                  className="flex space-x-2"
-                  onSubmit={() => alert("Coming Soon!")}
-                >
+                <div className="flex gap-2">
                   <Input
                     className="flex-1 rounded-full"
                     placeholder="Enter your email"
                     type="email"
                   />
                   <Button
-                    className="bg-[#ab9fff] text-white hover:bg-[#9687f9] rounded-full px-6"
+                    className="bg-[#9b91fc] text-white hover:bg-[#9687f9] rounded-full px-6"
                     type="submit"
                   >
                     Subscribe
                   </Button>
-                </form>
+                </div>
                 <p className="text-xs text-gray-500">
                   By subscribing, you agree to our Terms & Conditions and
                   Privacy Policy.
@@ -238,14 +223,9 @@ export function LandingPageComponent() {
         <p className="text-xs text-gray-500">
           © 2024 Pharmalance. All rights reserved.
         </p>
-        <nav className="sm:ml-auto flex gap-4 sm:gap-6">
-          {/* <Link className="text-xs hover:underline underline-offset-4" href="#">
-            Terms of Service
-          </Link>
-          <Link className="text-xs hover:underline underline-offset-4" href="#">
-            Privacy Policy
-          </Link> */}
-        </nav>
+      </footer>
+      <footer className="py-1 text-sm font-thin bg-[#fff] w-full text-center">
+        Built by Viatus Media
       </footer>
     </div>
   );
